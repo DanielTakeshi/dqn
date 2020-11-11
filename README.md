@@ -1,3 +1,5 @@
+*Note*: code used for the paper https://arxiv.org/abs/1910.12154
+
 # Student-Teacher Training with (Double) Deep Q-Networks
 
 Explores variations on the Deep Q-Learning algorithms, visualizes training and
@@ -55,7 +57,15 @@ solution is just to comment out the entire ROS sourcing portion.
 
 Look at `dqn/experiments` for usage and plotting.
 
-Look at the issues tracker for all the results I'm tracking; you can see the
-relevant issues with the "RESULTS" tag. We should probably figure out a better
-way to track results such as using products from "Weights and Biases", but I'm
-not sure what's a better option right now.
+# Miscellaneous
+
+If you find this work relevant to yours, please consider citing:
+
+```
+@article{seita_zpd_2019,
+    author = {Daniel Seita and Chen Tang and Roshan Rao and David Chan and Mandi Zhao and John Canny},
+    title = {{ZPD Teaching Strategies for Deep Reinforcement Learning from Demonstrations}},
+    journal={Deep Reinforcement Learning Workshop, NeurIPS},
+    Year = {2019}
+}
+```
