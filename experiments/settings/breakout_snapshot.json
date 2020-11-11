@@ -1,0 +1,47 @@
+{
+  "gpu": {
+    "id": 0
+  },
+  "env": {
+    "max_num_steps": 6e6,
+    "name": "BreakoutNoFrameskip-v4"
+  },
+  "log": {
+    "log_level": "debug",
+    "snapshot_per_step": 10e6,
+    "episode_per_epi": 10e6
+  },
+  "teacher": {
+    "type": "snapshots",
+    "progress_measure": "projection",
+    "teacher_samples_uniform": true,
+    "overlap": {
+        "match_method": "fixed_steps",
+        "prob_target": 0.3,
+        "overlap_target": 0.3,
+        "pretrained_model": null
+    },
+    "models": ["_breakout_standard_2019-03-01-20-56_s20416"],
+    "batch_size": 128,
+    "num_snapshot_ahead": -1,
+    "condense_freq": 5,
+    "negative_correction": false,
+    "progress_epsilon": 0.000001,
+    "temperature": 1,
+    "dedup_iterations": 0,
+    "init_wis_beta": 0.0,
+    "replay_size": 1e6,
+    "num_teacher_samples": 250000,
+    "blend": {
+      "frames": 100,
+      "start": 0.50,
+      "end": 0.50
+    },
+    "supervise_loss": {
+      "type": "margin",
+      "enabled": true,
+      "lambda": 0.100,
+      "margin": 0.8
+    }
+  }
+}

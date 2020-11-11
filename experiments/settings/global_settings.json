@@ -1,0 +1,56 @@
+{
+  "gpu": {
+    "id": 0,
+    "enabled": true,
+    "async": true
+  },
+  "env": {
+    "frame_stack": 4,
+    "frame_skip": 4,
+    "episode_life": true,
+    "clip_rewards": true,
+    "avg_window": 100,
+    "max_num_steps": 20000000,
+    "stop_reward": null
+  },
+  "train": {
+    "num_steps": 1,
+    "hidden_size": 512,
+    "double": true,
+    "target_sync_per_step": 2500,
+    "train_freq_per_step": 4,
+    "gamma": 0.99,
+    "batch_size": 32
+  },
+  "replay": {
+    "size": 250000,
+    "initial": 50000
+  },
+  "epsilon": {
+    "start": 1.0,
+    "frames_mid": 1000000,
+    "frames_end": 4000000,
+    "mid": 0.1,
+    "end": 0.01
+  },
+  "opt": {
+    "name": "Adam",
+    "decay_lr": 0.0001,
+    "clipping": 10,
+    "multiplier": 1,
+    "params": {
+      "weight_decay": 0.00001,
+      "lr": 0.0001,
+      "eps": 0.0001
+    }
+  },
+  "log": {
+    "log_level": "info",
+    "snapshot_per_step": 50000,
+    "episode_per_epi": 1,
+    "debug_per_step": 10000,
+    "snapshot_min_step": 100000,
+    "colored_output": false,
+    "have_test_proc": false
+  }
+}

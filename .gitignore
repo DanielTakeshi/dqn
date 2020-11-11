@@ -1,0 +1,14 @@
+__pycache__/
+experiments/runs
+.idea/
+.ipynb_checkpoints/
+github/
+.mypy_cache
+
+*.egg-info
+*.swp
+*.swo
+*.png
+
+build/
+dist/

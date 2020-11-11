@@ -1,0 +1,13 @@
+{
+  "gpu": {
+    "id": 0
+  },
+  "env": {
+    "max_num_steps": 6e6,
+    "name": "PongNoFrameskip-v4"
+  },
+  "log": {
+    "log_level": "debug",
+    "snapshot_per_step": 50000
+  }
+}
